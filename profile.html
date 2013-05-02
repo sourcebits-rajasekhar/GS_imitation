@@ -1,42 +1,80 @@
 <html >
  <head>
  <link  rel="stylesheet" type = "text/css" href = "style.css" > 
- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
-</script>
+ <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
  
  <script>
  $(function() {
 
-    $("#nextlink").click(function(event) {
-    	 event.preventDefault();
-    	 var href = this.href; 
-        var large_image= $(".large");
-        var small_image =$("#small_two");
-        var small_image_one =$("#small_one");
-        large_image.animate({"left":"100px"},500,function(){
-        	window.location = href;
-        });
-        small_image.animate({"left":"200px"},500,function(){
-        	window.location = href;
-        });
-       small_image_one.animate({"left":"150px"},500,function(){
-        	window.location = href;
-        });
+    // $("#nextlink").click(function(event) {
+    // 	 event.preventDefault();
+    // 	 var href = this.href; 
+    //     var large_image= $(".large");
+    //     var small_image =$("#small_two");
+    //     var small_image_one =$("#small_one");
+    //     large_image.animate({"left":"100px"},500,function(){
+    //     	window.location = href;
+    //     });
+    //     small_image.animate({"left":"200px"},500,function(){
+    //     	window.location = href;
+    //     });
+    //    small_image_one.animate({"left":"150px"},500,function(){
+    //     	window.location = href;
+    //     });
 
-    });
+    // });
+
+   $("#backlink").hover(
+      function(){
+        $(this).text("back link");
+        $(this).css({"width" : "120px","text-align" : "center", "z-index" : "20"});
+      },
+      function(){
+        $('#backlink').text("back");
+        $('#backlink').css({"width" : "70px" ,"text-align" : "center" });
+      } 
+     ); 
+   $("#nextlink").hover(
+      function(){
+      
+        // $(this).css({"width" : "120px","text-align" : "center", "z-index" : "20" , "background-color" : "orange" });
+        $(this).animate({"width" : "120px","text-align" : "center", "z-index" : "20"},50,function(){
+             
+              $(this).css({"background-color" : "orange"});
+              $(this).text("next link");
+            
+        });
+      },
+      function(){
+        $('#nextlink').text("next");
+        $('#nextlink').css({"width" : "70px" ,"text-align" : "center","background-color" : "#5C2C0D"});
+      } 
+     );
+
 });
-
-
+ 
+ 
  </script>
  <title> Profile </title>
 </head>
  <body> 
- <div class="container" >	
-  <img class = "large"  src = "/one.jpeg">
+ <section class="container" >	 
+  <section class="large">
+     <img id="largeimage" src = "/one.jpeg">
+     <h2><a href="/one.jpeg">Check the image location</a></h2> 
+  </section>
+
   <img class = "small" id = "small_one" src ="/two.jpeg"> 
   <img class = "small" id = "small_two" src = "/three.jpeg">
- </div>
-  <a id="backlink" href="index.html"> Back </a>
-  <a id="nextlink" href="contacts.html"> Next </a>
+ </section>
+  <a id="backlink" href="index.html"> back </a>
+  <a id="nextlink" href="contacts.html"> next </a>
+
+ <script>
+
+   
+ </script>
+
  </body>
  </html> 
