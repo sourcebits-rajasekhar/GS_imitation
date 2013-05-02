@@ -1,0 +1,40 @@
+<html >
+ <head>
+ <link  rel="stylesheet" type = "text/css" href = "style.css" > 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+</script>
+ 
+ <script>
+ $(function() {
+    var moveDuration = 500;
+    $("#nextlink").click(function(event) {
+    	 event.preventDefault();
+    	 var href = this.href; 
+        var large_image= $(".large");
+        var small_image =$("#small_two");
+        var small_image_one =$("#small_one");
+        large_image.animate({"left":"100px"},500,function(){
+        	window.location = href;
+        });
+        small_image.animate({"left":"200px"},500,function(){
+        	window.location = href;
+        });
+       small_image_one.animate({"left":"150px"},500,function(){
+        	window.location = href;
+        });
+
+    });
+});
+ </script>
+ <title> Index </title>
+</head>
+ <body> 
+ <div class="container" >	
+  <img class = "large"  src = "/four.jpg">
+  <img class = "small" id = "small_one" src ="/three.jpeg"> 
+  <img class = "small" id = "small_two" src = "/one.jpeg">
+ </div>
+  <a id="backlink" href ="contacts.html" > Back </a>
+  <a id="nextlink" href ="profile.html"> Next </a>
+ </body>
+ </html> 

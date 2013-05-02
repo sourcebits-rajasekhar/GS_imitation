@@ -1,0 +1,60 @@
+
+ html{
+
+ }
+
+
+ body 
+ {
+    position:relative;
+ 	width:800px;
+ 	height:600px;
+    margin-left: 400px;
+    margin-top:50px;
+ 	background-color: white;
+ 	overflow:hidden;
+ }
+ .container{
+ 	
+    width:800px;
+    height:600px;
+    overflow:hidden;   
+ }
+ 
+ .large 
+ {  
+ 	position:relative;
+ 	float:left;
+    width:800px;
+    height:300px;
+    overflow:hidden;
+ 
+ }
+ .small
+ { 
+   position:relative;
+   width:400px;
+   height:300px;
+   float: left;
+   overflow:hidden;
+ }
+
+ #backlink, #nextlink {
+ 	 
+     width:70px;
+     height:30px;
+     display:block;
+     background-color: #5C2C0D;
+     color:white;
+     position:absolute;
+     top:280px ;
+     text-decoration: none;
+     text-align: center;
+     padding-top: 9px;
+     font-size: 1em;
+ }
+ #nextlink {
+     right:0;
+     top :280px;
+ }
+
