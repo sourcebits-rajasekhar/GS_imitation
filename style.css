@@ -40,16 +40,29 @@
     height:300px;
     overflow:hidden;
  }
+.large article {
+
+     color:white;
+     z-index:5;
+     position:absolute;
+     top:60px;
+     right:20px;
+     width:200px;
+     height:300px;
+     padding:10px 10px 10px 10px;
+  }
+  .large article h2{
+     position:relative;
+     font-family:sans-serif; 
+     font-weight:5; 
+  }
 
  .large a {
-    color:#435345;
+    position: relative;
     text-decoration:none; 
-    z-index:5;
-    position:relative;
-    top:220px;
-    left:400px;
     font-size:1em;
     font-family:sans-serif; 
+    color:white;
  }
 
  .small
